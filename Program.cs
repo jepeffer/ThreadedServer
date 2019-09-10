@@ -1,14 +1,16 @@
-﻿using System;
-
+﻿using System;  
+using System.Net;  
+using System.Net.Sockets;  
+using System.Text;  
+using System.Threading;  
 namespace ThreadedServer
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            Console.WriteLine("LET ME INIT GIT");
+           new Server();
         }
     }
+    
 }
