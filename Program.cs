@@ -9,8 +9,15 @@ namespace ThreadedServer
     {
         static void Main(string[] args)
         {
-           new Server();
-        }
+           Thread t1 = new Thread(delegate()
+			   {
+				Server myServer = new Server("174.138.46.163",5556);
+				});
+	
+	// Start the thread	   
+    	t1.Start();
+    	Console.WriteLine("Server is up....!");	
+    }
     }
     
 }
