@@ -11,7 +11,7 @@ namespace ThreadedServer
         {
            Thread t1 = new Thread(delegate()
 			   {
-				Server myServer = new Server("174.138.46.163",5556);
+				Server myServer = new Server("127.0.0.1",5556);
 				});
 	
 	// Start the thread	   

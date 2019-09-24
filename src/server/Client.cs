@@ -1,14 +1,20 @@
 using System.Net.Sockets;
+using System;
 
 
-public class Client{
-
-private Socket socket;
-
-
-public Client(Socket inSocket)
+public class Client
 {
-    socket = inSocket;
-}
+    TcpClient client;
 
+    NetworkStream stream;
+    Socket socket;
+
+
+    public Client() { client = new TcpClient(); }
+
+    public void threadStart(Object obj)
+    {
+        client = (TcpClient)obj;
+        stream = client.GetStream();
+    }
 }
